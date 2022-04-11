@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{geometry}
+\usepackage{amsmath}
 
 \geometry{left=2.0cm, right=2.0cm, top = 3cm, bottom=3cm}
 \pagestyle{fancy}
@@ -138,7 +139,7 @@
         因此方程（\ref{eq: damped}）的通解即为
 
         \begin{equation}
-            \theta = A\e^{i(\omega t + \phi)}
+            \theta = A\e^{i(\omega t + \varphi)}
         \end{equation}
 
         观察发现，$\omega$中的$i\beta$项最终会产生一个指数衰减项，而后面根号内部的正负则会决定最后是否会是一个周期运动。因此我们有必要对于根号下的式子的正负进行讨论，由此把运动分为三种情况：
@@ -360,7 +361,7 @@
 
         欠阻尼情况下，通解为
         \begin{equation}
-            \theta = \theta_0 \e^{-\beta t} \cos (\sqrt{\omega_0^2 - \beta^2}t + \phi_0) + \theta_m \cos(\omega t - \phi)
+            \theta = \theta_0 \e^{-\beta t} \cos (\sqrt{\omega_0^2 - \beta^2}t + \phi_0) + \theta_m \cos(\omega t - \varphi)
             \label{eq: 受迫振动通解}
         \end{equation}
 
@@ -373,10 +374,10 @@
         \end{equation}
         相位差
         \begin{equation}
-            \phi = \arctan \frac{2\beta\omega}{\omega_0^2-\omega^2}
-            \label{phi}
+            \varphi = \arctan \frac{2\beta\omega}{\omega_0^2-\omega^2}
+            \label{varphi}
         \end{equation}
-        无论什么情况，总有$0<\phi<\pi$.这表明，受迫振动系统振动相位总是落后于强迫力。
+        无论什么情况，总有$0<\varphi<\pi$.这表明，受迫振动系统振动相位总是落后于强迫力。
 
         \textbf{B.1 推导共振频率以及共振处振幅最大值的表达式}
 
@@ -389,13 +390,13 @@
             \omega = \sqrt{\omega_0^2 - 2\beta^2}
         \end{equation}
         易验证此时$\theta_m$确实取到极大值，也即最大值。
-        代入 式(\ref{theta})和 式(\ref{phi})可得，系统共振时的稳态振幅
+        代入 式(\ref{theta})和 式(\ref{varphi})可得，系统共振时的稳态振幅
         \begin{equation}
             \theta^*_m = \frac{A_D\omega_0^2}{2\beta\sqrt{\omega_0^2-\beta^2}}
         \end{equation}
         和稳态相位差
         \begin{equation}
-            \phi^* = \arctan \frac{\sqrt{\omega_0^2-2\beta^2}}\beta
+            \varphi^* = \arctan \frac{\sqrt{\omega_0^2-2\beta^2}}\beta
         \end{equation}
         在低阻尼情况下($\beta \ll \omega_0$)，有近似解
         \begin{equation}
@@ -405,7 +406,7 @@
             \theta^*_m = \frac{A_D\omega_0}{2\beta} = A_D Q
         \end{equation}
         \begin{equation}
-            \phi^* = \arctan \frac{\omega_0}{\beta} = \arctan 2Q
+            \varphi^* = \arctan \frac{\omega_0}{\beta} = \arctan 2Q
         \end{equation}
     ~\\
     \textbf{\romannumeral2. 实验部分}
@@ -550,8 +551,45 @@
         ~\\~\\
         \textbf{C.2 推导振动系统达到稳态之后电机在一个周期内提供的平均输入功率}
             达到稳态之后，系统总机械能维持恒定不变。因此，一个周期内，电机对系统做功等于系统克服阻尼力做的功，即
-            \begin{eqnarray}
-                W_{motor} = W_{resistance} = \int M_r \dif \theta
+            \begin{align}
+                W_{motor} & = W_{resistance} = \int M_r \dif \theta \\
+                &= \int \gamma\dot{\theta}\dif\theta \\
+                &= 2\beta J\int_0^T \dot{\theta}^2\dif t \\
+                &= 2\beta J\int_0^T (\omega_0\theta_m\cos\omega_0t)^2\dif t \\
+                &= 2\pi\beta J\omega_0\theta_m^2
+            \end{align}
+            将式(\ref{eq: quality})以及$J=\frac k{\omega_0^2}$代入可得
+            \begin{equation}
+                W_{motor} = \frac{\pi k\theta_m^2}{Q}
+            \end{equation}
+            因此
+            \begin{equation}
+                P_{motor} = \frac{W_{motor}}{T} = \frac{k\theta_m^2\omega_0}{2Q}
+            \end{equation}
+    \section{分析讨论}
+        \begin{enumerate}
+            \item \textbf{实验中误差的来源}
+
+                摆轮每一个齿的角度为$2^\circ$，致使光电门测量振幅的误差达到$1^\circ$，带来较大误差。同时测量相位差的闪光灯有一定的读数困难，实际误差会远比刻度盘的分度值大。
                 
-            \end{eqnarray}
+            \item \textbf{近似的合理性与不足之处}
+            
+                本文的理论推导多处使用$\beta \ll \omega_0$的近似，这在低档阻尼的条件下比较精确，但是在5档阻尼的情况下，可能有较大误差（相差仅1个数量级）。如果在较大的阻尼作用下要研究振动系统的性质时，近似的保留阶数可以做进一步提高。
+
+            \item \textbf{测量时的注意点}
+            
+                测量幅频特性曲线的时候，选取数据点时要注意均匀分布在最大振幅附近。在最大振幅的地方要取得更密集一点，这样方便确定极值的位置（曲线在这附近的变化比较快）。测量时，因为系统达到稳态需要一定的时间，所以我在实验的时候，调节周期会选择先调过，再调回，而不是简单地单调变化，这样可以使振动系统的振幅在最终稳态振幅附近波动，反而比那种指数衰减地接近稳态振幅更加容易测量，节省了时间。
+
+        \end{enumerate}
+    \section{附录：原始数据}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.16]{原始数据1.jpg}
+            \caption{原始数据1}
+        \end{figure}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.16]{原始数据2.jpg}
+            \caption{原始数据2}
+        \end{figure}
 \end{document}

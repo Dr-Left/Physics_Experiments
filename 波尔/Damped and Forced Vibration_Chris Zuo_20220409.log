@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.1.5)  11 APR 2022 14:45
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.1.5)  11 APR 2022 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -247,7 +247,8 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen182
 \Gm@layoutvoffset=\dimen183
 \Gm@dimlist=\toks18
-) (./Damped and Forced Vibration_Chris Zuo_20220409.aux)
+)
+No file "Damped and Forced Vibration_Chris Zuo_20220409".aux.
 \openout1 = `"Damped and Forced Vibration_Chris Zuo_20220409.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -266,7 +267,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
- ABD: EverySelectfont initializing macros
+ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 22.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
@@ -366,8 +367,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 23.
+
+LaTeX Warning: Reference `pic1' on page 1 undefined on input line 40.
+
 File: Bohr.png Graphic file (type bmp)
 <Bohr.png>
+
+LaTeX Warning: Reference `pic2' on page 1 undefined on input line 49.
+
 File: box.png Graphic file (type bmp)
 <box.png>
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -383,10 +390,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
+
+LaTeX Warning: Reference `eq: damped' on page 3 undefined on input line 138.
+
+
+LaTeX Warning: Reference `eq: damped' on page 3 undefined on input line 148.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 153.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 153.
+
+LaTeX Warning: Reference `eq: damped' on page 3 undefined on input line 157.
+
+
+LaTeX Warning: Reference `eq: damped' on page 3 undefined on input line 166.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -396,9 +414,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
+
+LaTeX Warning: Reference `eq: energy wrt amplitude' on page 4 undefined on input line 187.
+
+
+LaTeX Warning: Reference `eq: beta' on page 4 undefined on input line 204.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 204--207
 
  []
+
+
+LaTeX Warning: Reference `eq: underdamping angle expression' on page 4 undefined on input line 208.
 
 File: 无阻尼 角度数据.png Graphic file (type bmp)
 <无阻尼 角度数据.png>
@@ -448,6 +476,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--320
  []
 
 
+LaTeX Warning: Reference `eq: quality' on page 7 undefined on input line 323.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -455,13 +486,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7]
+
+LaTeX Warning: Reference `theta' on page 8 undefined on input line 392.
+
+
+LaTeX Warning: Reference `phi' on page 8 undefined on input line 392.
+
+
+LaTeX Warning: Reference `fig: 幅频相频数据' on page 8 undefined on input line 423.
+
 File: 幅频相频数据.png Graphic file (type bmp)
 <幅频相频数据.png>
+
+LaTeX Warning: Reference `fig: 幅频特性曲线' on page 8 undefined on input line 434.
+
 File: 幅频特性曲线.png Graphic file (type bmp)
 <幅频特性曲线.png>
+
+LaTeX Warning: Reference `fig: 相频特性曲线' on page 8 undefined on input line 443.
+
 File: 相频特性曲线.png Graphic file (type bmp)
 <相频特性曲线.png>
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -479,20 +524,208 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
+LaTeX Warning: Reference `fig: 受迫振动瞬态数据' on page 10 undefined on input line 510.
+
+File: 受迫振动瞬态数据.png Graphic file (type bmp)
+<受迫振动瞬态数据.png>
+
+LaTeX Warning: Reference `fig: 振幅曲线' on page 10 undefined on input line 519.
+
+File: 受迫振动瞬态振幅曲线.png Graphic file (type bmp)
+<受迫振动瞬态振幅曲线.png>
+
+LaTeX Warning: Reference `eq: 受迫振动通解' on page 10 undefined on input line 528.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10] (./Damped and Forced Vibration_Chris Zuo_20220409.aux) ) 
+[10]
+
+LaTeX Warning: Reference `eq: 受迫振动通解' on page 11 undefined on input line 532.
+
+
+LaTeX Warning: Reference `fig: 受迫理论和实际' on page 11 undefined on input line 540.
+
+File: 受迫振动瞬态振幅理论和实际对比曲线.png Graphic file (type bmp)
+<受迫振动瞬态振幅理论和实际对比曲线.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--553
+
+ []
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:555: Missing $ inserted.
+<inserted text> 
+                $
+l.555 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:555: Missing } inserted.
+<inserted text> 
+                }
+l.555 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:555: Missing } inserted.
+<inserted text> 
+                }
+l.555 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:555: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.555 
+      
+I'm guessing that you meant to end an alignment here.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:555: Missing { inserted.
+<inserted text> 
+                {
+l.555 
+      
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:555: Missing $ inserted.
+<inserted text> 
+                $
+l.555 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:555: Missing $$ inserted.
+<to be read again> 
+                   \par 
+l.555 
+      
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:556: Misplaced alignment tab character &.
+\reserved@a ->&
+                & &
+l.556             \end{eqnarray}
+                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:556: Misplaced alignment tab character &.
+\reserved@a ->& &
+                  &
+l.556             \end{eqnarray}
+                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:556: Misplaced alignment tab character &.
+\reserved@a ->& & &
+                   
+l.556             \end{eqnarray}
+                                
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:556: Misplaced \cr.
+\@@eqncr ...l \@eqnswtrue \global \@eqcnt \z@ \cr 
+                                                  
+l.556             \end{eqnarray}
+                                
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:556: Extra }, or forgotten \endgroup.
+\endeqnarray ->\@@eqncr \egroup 
+                                \global \advance \c@equation \m@ne $$\@ignor...
+l.556             \end{eqnarray}
+                                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:556: Missing $ inserted.
+<inserted text> 
+                $
+l.556             \end{eqnarray}
+                                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./Damped and Forced Vibration_Chris Zuo_20220409.tex:556: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.556             \end{eqnarray}
+                                
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12] (./Damped and Forced Vibration_Chris Zuo_20220409.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7147 strings out of 478866
- 205939 string characters out of 5863540
- 538809 words of memory out of 5000000
- 26916 multiletter control sequences out of 15000+600000
+ 7167 strings out of 478866
+ 206207 string characters out of 5863540
+ 538706 words of memory out of 5000000
+ 26935 multiletter control sequences out of 15000+600000
  408210 words of font info for 69 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  101i,11n,104p,405b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Damped and Forced Vibration_Chris Zuo_20220409.pdf (10 pages).
+Output written on Damped and Forced Vibration_Chris Zuo_20220409.pdf (12 pages).

@@ -361,6 +361,7 @@
         欠阻尼情况下，通解为
         \begin{equation}
             \theta = \theta_0 \e^{-\beta t} \cos (\sqrt{\omega_0^2 - \beta^2}t + \phi_0) + \theta_m \cos(\omega t - \phi)
+            \label{eq: 受迫振动通解}
         \end{equation}
 
         发现通解中前一项随着时间增加衰减至0，后一项是稳态运动解。
@@ -394,7 +395,7 @@
         \end{equation}
         和稳态相位差
         \begin{equation}
-            \phi = \arctan \frac{\sqrt{\omega_0^2-2\beta^2}}\beta
+            \phi^* = \arctan \frac{\sqrt{\omega_0^2-2\beta^2}}\beta
         \end{equation}
         在低阻尼情况下($\beta \ll \omega_0$)，有近似解
         \begin{equation}
@@ -404,7 +405,7 @@
             \theta^*_m = \frac{A_D\omega_0}{2\beta} = A_D Q
         \end{equation}
         \begin{equation}
-            \phi = \arctan \frac{\omega_0}{\beta} = \arctan 2Q
+            \phi^* = \arctan \frac{\omega_0}{\beta} = \arctan 2Q
         \end{equation}
     ~\\
     \textbf{\romannumeral2. 实验部分}
@@ -504,7 +505,53 @@
         和A.4中比较，发现在误差范围内符合得很好，这说明了用幅频特性曲线计算品质因数的合理性。
 
     \subsection{探究受迫振动的瞬态过程}
+        \textbf{C.1 测试3档阻尼下系统受迫振动的瞬态过程，绘制振幅-时间曲线并将理论和实际相对比}
 
+        将阻尼档置为3档，将摆轮拨至平衡位置，并让其静止。此时打开电机开关，使摆轮开始振动，同时立刻开始记录振幅和周期数据，数据见图(\ref{fig: 受迫振动瞬态数据})。
 
-    
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.6]{受迫振动瞬态数据.png}
+            \caption{受迫振动瞬态振幅即周期数据}
+            \label{fig: 受迫振动瞬态数据}
+        \end{figure}
+
+        并由此绘制出振动系统振幅随着时间变化的曲线，如图(\ref{fig: 振幅曲线})所示。
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.7]{受迫振动瞬态振幅曲线.png}
+            \caption{受迫振动瞬态振幅曲线}
+            \label{fig: 振幅曲线}
+        \end{figure}
+
+        由式(\ref{eq: 受迫振动通解})，代入初始值$\theta(0) = 0$和$\dot{\theta}(0) = 0$，结合低阻尼近似\footnote{这种近似的合理性在于，A实验已经测定，3档阻尼的$\beta = (0.0694 \pm 0.0020)s^{-1} $，和$\omega_0 = (4.195 \pm 0.008)s^{-1}$对比可知，数量级相差2倍。},可以得到
+        \begin{equation}
+            \theta_0 = -\theta_m
+        \end{equation}
+        再代回式(\ref{eq: 受迫振动通解})，得到
+        \begin{equation}
+            \theta = \theta_m(1-\e^{-\beta t})\sin\omega_0t
+        \end{equation}
+        可知振幅的表达式
+        \begin{equation}
+            \theta_{max} = \theta_m(1-\e^{-\beta t})
+        \end{equation}
+        将理论值绘制出曲线，和实际振幅绘制在一幅图中，如图(\ref{fig: 受迫理论和实际})所示。
+        
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.7]{受迫振动瞬态振幅理论和实际对比曲线.png}
+            \caption{受迫振动瞬态振幅理论和实际对比曲线}
+            \label{fig: 受迫理论和实际}
+        \end{figure}
+
+        可以看出，理论曲线和实测曲线在误差范围内符合的程度是非常之高的。
+        ~\\~\\
+        \textbf{C.2 推导振动系统达到稳态之后电机在一个周期内提供的平均输入功率}
+            达到稳态之后，系统总机械能维持恒定不变。因此，一个周期内，电机对系统做功等于系统克服阻尼力做的功，即
+            \begin{eqnarray}
+                W_{motor} = W_{resistance} = \int M_r \dif \theta
+                
+            \end{eqnarray}
 \end{document}

@@ -334,19 +334,19 @@
             $$
             最终结果
             $$
-                U_Q = 496 \pm 6
+                Q = 496 \pm 6
             $$
             \item 3档阻尼
             
             求解过程类似，此处省略过程，给出最终结果
             $$
-                U_Q = 30.1 \pm 0.9
+                Q = 30.1 \pm 0.9
             $$
             \item 5档阻尼
             
             求解过程类似，此处省略过程，给出最终结果
             $$
-                U_Q = 16.16 \pm 0.20
+                Q = 16.16 \pm 0.20
             $$
         \end{enumerate}
         
@@ -417,15 +417,94 @@
 
         连续5次周期测量相等。
 
-        \textbf{B.3 测定幅频特性曲线和相频特性曲线}
+        \textbf{B.3 测定幅频特性和相频特性}
 
-        阻尼档位分别置于3和5，打开步进电机，调节电机频率，通过闪光灯观察相位差，用实验箱测量周期。
+        阻尼档位分别置于3档和5档\footnote{此处选择的档位和A.3中一致。}，打开步进电机，调节电机频率，通过闪光灯观察相位差，用实验箱测量周期和振幅，得到实验数据如图(\ref{fig: 幅频相频数据})所示。
 
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.5]{幅频相频数据.png}
+            \caption{受迫振动振幅和相位差的实验数据}
+            \label{fig: 幅频相频数据}
+        \end{figure}
+
+        \textbf{B.4 绘制幅频特性曲线和相频特性曲线}
+
+        绘制出幅频特性曲线，如图(\ref{fig: 幅频特性曲线})所示。
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.5]{幅频特性曲线.png}
+            \caption{幅频特性曲线}
+            \label{fig: 幅频特性曲线}
+        \end{figure}
+
+        和相频特性曲线，如图(\ref{fig: 相频特性曲线})所示
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[scale=0.5]{相频特性曲线.png}
+            \caption{相频特性曲线}
+            \label{fig: 相频特性曲线}
+        \end{figure}
+
+        理论计算出，3档阻尼的理论共振周期
+        $$
+            T_3 = \frac{2\pi}{\sqrt{\omega_0^2-2\beta^2}}\Bigg|_{\beta = 0.0694s^{-1}} =  1.498s
+        $$
+
+        5档阻尼的理论共振周期
+        $$
+            T_5 = \frac{2\pi}{\sqrt{\omega_0^2-2\beta^2}}\Bigg|_{\beta = 0.1296s^{-1}} =  1.499s
+        $$
+
+        和从图中读出的最大振幅位置处的强迫力周期能够较好地符合。
+
+        \textbf{B.5 由幅频特性曲线计算品质因数Q}
+
+        由理论分析可知，在低阻尼情况下，品质因数$Q$可如此表示
+
+        \begin{equation}
+            Q \approx \frac{\omega_r}{|\omega_+-\omega_-|}
+        \end{equation}
+
+        其中，$\omega_r$为振幅最大时对应的角频率，$\omega_\pm$为振幅等于$\frac{\sqrt{2}}2$倍振幅最大值对应的两个角频率值。
+
+        从图中读数，得到
+
+        3挡
+        $$
+            T_r = 1.499s
+        $$
+        $$
+            T_- = 1.481s
+        $$
+        $$
+            T_+ = 1.532s
+        $$
+        计算得出品质因数
+        $$
+            Q = \frac{T_-T_+}{T_r|T_+-T_-|} = 30 \pm 1
+        $$
         
-
-
-
-
+        5挡
+        $$
+            T_r = 1.507s
+        $$
+        $$
+            T_- = 1.466s
+        $$
+        $$
+            T_+ = 1.559s
+        $$
+        计算得出品质因数
+        $$
+            Q = \frac{T_-T_+}{T_r|T_+-T_-|} = 16 \pm 1
+        $$
+        和A.4中比较，发现在误差范围内符合得很好，这说明了用幅频特性曲线计算品质因数的合理性。
 
     \subsection{探究受迫振动的瞬态过程}
+
+
+    
 \end{document}
